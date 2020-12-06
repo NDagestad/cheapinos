@@ -196,7 +196,7 @@ func main(){
 	fmt.Printf("Pizzas:\n")
 	for i := 0; i<len(pizzas) && i<4; i++ {
 		fmt.Printf("%s: %d.%.2d€\n", pizzas[i].Name, pizzas[i].GetPrice()/100, pizzas[i].GetPrice()%100)
-		fmt.Printf("\t%d [", len(pizzas[i].Ingredients))
+		fmt.Printf("\t%d.%.2d€ %d [", pizzas[i].PriceDelta/100, -pizzas[i].PriceDelta%100, len(pizzas[i].Ingredients))
 		for _, name := range pizzas[i].Ingredients {
 			fmt.Printf("%s,", name)
 		}

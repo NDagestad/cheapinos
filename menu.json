@@ -1,0 +1,123 @@
+[
+	{
+		"name": "savoureuse fondue",
+		"price": 1000,
+		"ingredients": ["lardons", "mélange fondue français", "mozzarella"]
+	},
+	{
+		"name": "authentique raclette",
+		"price": 1050,
+		"ingredients": ["bacon", "mozzarella", "oignons", "pomme de terre", "raclette française"]
+	},
+	{
+		"name": "généreuse avalanche",
+		"price": 1050,
+		"ingredients": ["mélange fondue français", "mozzarella", "reblochon"]
+	},
+	{
+		"name": "chèvre miel",
+		"price": 1000,
+		"ingredients": ["chèvre", "miel français", "mozzarella"]
+	},
+	{
+		"name": "urban kebab",
+		"price": 1000,
+		"ingredients": ["merguez", "mozzarella", "oignons", "sauce kebab", "viande kebab"]
+	},
+	{
+		"name": "bacon groovy",
+		"price": 1050,
+		"ingredients": ["bacon", "mozzarella", "oignons", "poulet rôti", "sauce bbq"]
+	},
+	{
+		"name": "savoyarde",
+		"price": 1050,
+		"ingredients": ["lardons", "mozzarella", "origan", "pomme de terre", "reblochon"]
+	},
+	{
+		"name": "diavola",
+		"price": 1000,
+		"ingredients": ["boulettes de boeuf assaisonnées", "mozzarella", "oignons", "piments jalapenos",
+			"poivrons mélangés"]
+	},
+	{
+		"name": "diavola pepperoni",
+		"price": 1000,
+		"ingredients": ["mozzarella", "oignons", "pepperoni", "piments jalapenos", "poivrons mélangés"]
+	},
+	{
+		"name": "hypnotika",
+		"price": 1000,
+		"ingredients": ["champignons", "crème fraîche légère française", "merguez", "mozzarella",
+			"poulet rôti"]
+	},
+	{
+		"name": "extravaganzza",
+		"price": 1050,
+		"ingredients": ["boulettes de boeuf assaisonnées", "champignons", "jambon", "mozzarella",
+			"oignons", "olives noires", "pepperoni", "poivrons mélangés"]
+	},
+	{
+		"name": "4 fromages",
+		"price": 1050,
+		"ingredients": ["chèvre", "emmental français", "fourme d'ambert", "mozzarella"]
+	},
+	{
+		"name": "hawaïenne jambon",
+		"price": 1000,
+		"ingredients": ["ananas", "jambon", "mozzarella"]
+	},
+	{
+		"name": "hawaïenne poulet",
+		"price": 1000,
+		"ingredients": ["ananas", "mozzarella", "poulet rôti"]
+	},
+	{
+		"name": "indienne", 
+		"price": 1000,
+		"ingredients": ["champignons", "emmental français", "mozzarella", "oignons", "poulet rôti"]
+	},
+	{
+		"name": "forestière",
+		"price": 1000,
+		"ingredients": ["champignons", "jambon", "lardons", "mozzarella", "oignons", "origan"]
+	},
+	{
+		"name": "cannibale",
+		"price": 1050,
+		"ingredients": ["boulettes de boeuf assaisonnées", "merguez", "mozzarella", "poulet rôti"]
+	},
+	{
+		"name": "deluxe",
+		"price": 850,
+		"ingredients": ["boulettes de boeuf assaisonnées", "champignons", "mozzarella", "oignons",
+			"poivrons mélangés"]
+	},
+	{
+		"name": "reine",
+		"price": 850,
+		"ingredients": ["champignons", "jambon", "mozzarella"]
+	},
+	{
+		"name": "steak & cheese",
+		"price": 850,
+		"ingredients": ["boulettes de boeuf assaisonnées", "mozzarella", "origan", "tomates fraîches"]
+	},
+	{
+		"name": "orientale",
+		"price": 850,
+		"ingredients": ["merguez", "mozzarella", "oignons", "poivrons mélangés"]
+	},
+	{
+		"name": "peppina",
+		"price": 850,
+		"ingredients": ["champignons", "mozzarella", "oignons", "olives noires", "origan", 
+			"poivrons mélangés", "tomates fraîches"]
+	},
+	{
+		"name": "pêcheur",
+		"price": 850,
+		"ingredients": ["crème fraîche légère française", "mozzarella", "oignons", "olives noires",
+			"thon"]
+	}
+]

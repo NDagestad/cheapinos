@@ -8,6 +8,7 @@ import (
 	"io/ioutil"
 	"sort"
 	"strings"
+	"math"
 	"strconv"
 	"os"
 )
@@ -28,6 +29,9 @@ func (this *pizza) Remove(ing ingredient){
 	for idx, name := range this.Ingredients {
 		if name == ing.Name {
 			this.PriceDelta -= ing.Price
+			if this.PriceDelta < -230 {
+				this.PriceDelta = -230
+			}
 			this.Ingredients[idx] = this.Ingredients[len(this.Ingredients)-1]
 			this.Ingredients = this.Ingredients[:len(this.Ingredients)-1]
 			return
@@ -196,7 +200,7 @@ func main(){
 	fmt.Printf("Pizzas:\n")
 	for i := 0; i<len(pizzas) && i<4; i++ {
 		fmt.Printf("%s: %d.%.2d€\n", pizzas[i].Name, pizzas[i].GetPrice()/100, pizzas[i].GetPrice()%100)
-		fmt.Printf("\t%d.%.2d€ %d [", pizzas[i].PriceDelta/100, -pizzas[i].PriceDelta%100, len(pizzas[i].Ingredients))
+		fmt.Printf("\t%d.%.2d€ %d [", pizzas[i].PriceDelta/100, (int)(math.Abs((float64)(pizzas[i].PriceDelta%100))), len(pizzas[i].Ingredients))
 		for _, name := range pizzas[i].Ingredients {
 			fmt.Printf("%s,", name)
 		}

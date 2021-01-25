@@ -119,5 +119,15 @@
 		"price": 850,
 		"ingredients": ["crème fraîche légère française", "mozzarella", "oignons", "olives noires",
 			"thon"]
+	},
+	{
+		"name": "basilica poulet",
+		"price": 1000,
+		"ingredients": ["mozzarella", "poulet rôti", "oignons", "tomates cerises marinées", "sauce basilic"]
+	},
+	{
+		"name": "basilica veggie",
+		"price": 1050,
+		"ingredients": ["mozzarella", "émincé végétal rôti", "oignons", "tomates cerises marinées", "sauce basilic"]
 	}
 ]

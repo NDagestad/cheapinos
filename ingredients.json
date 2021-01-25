@@ -32,5 +32,9 @@
 	{"name":"saumon","price":290},
 	{"name":"thon","price":230},
 	{"name":"tomates fraîches","price":100},
-	{"name":"viande kebab", "price": 200}
+	{"name":"viande kebab", "price": 200},
+	{"name":"émincé végétal rôti", "price": 290},
+	{"name":"sauce basilic", "price": 150},
+	{"name":"rapé vegan", "price": 290},
+	{"name":"tomates cerises marinées", "price": 150}
 ]

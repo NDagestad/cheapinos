@@ -14,7 +14,7 @@ import (
 )
 
 type pizza struct {
-	Name        string		 `json:"name"`
+	Name        string       `json:"name"`
 	Price       int          `json:"price"`
 	PriceDelta  int          `json:-`
 	Ingredients []string     `ingredients:"ingredients"`
@@ -97,7 +97,7 @@ func main(){
 		fmt.Printf("OPTIONS:\n")
 		flag.PrintDefaults()
 		fmt.Printf("\n")
-    }
+	}
 	flag.Parse()
 
 	if help {

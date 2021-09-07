@@ -3,21 +3,23 @@ package main
 import (
 	_ "encoding/csv"
 	"encoding/json"
-	"fmt"
 	"flag"
+	"fmt"
 	"io/ioutil"
-	"sort"
-	"strings"
 	"math"
-	"strconv"
 	"os"
+	"sort"
+	"strconv"
+	"strings"
 )
 
 type pizza struct {
-	Name        string       `json:"name"`
-	Price       int          `json:"price"`
-	PriceDelta  int          `json:-`
-	Ingredients []string     `ingredients:"ingredients"`
+	Name               string   `json:"name"`
+	Price              int      `json:"price"`
+	PriceDelta         int      `json:-`
+	Ingredients        []string `ingredients:"ingredients"`
+	AddedIngredients   []string
+	RemovedIngredients []string
 }
 
 type ingredient struct {
@@ -25,7 +27,7 @@ type ingredient struct {
 	Price int
 }
 
-func (this *pizza) Remove(ing ingredient){
+func (this *pizza) Remove(ing ingredient) {
 	for idx, name := range this.Ingredients {
 		if name == ing.Name {
 			this.PriceDelta -= ing.Price
@@ -34,22 +36,23 @@ func (this *pizza) Remove(ing ingredient){
 			}
 			this.Ingredients[idx] = this.Ingredients[len(this.Ingredients)-1]
 			this.Ingredients = this.Ingredients[:len(this.Ingredients)-1]
+			this.RemovedIngredients = append(this.RemovedIngredients, ing.Name)
 			return
 		}
 	}
 }
 
-func (this *pizza) Add(ing ingredient){
+func (this *pizza) Add(ing ingredient) {
 	for _, name := range this.Ingredients {
 		if name == ing.Name {
 			return
 		}
 	}
 	this.PriceDelta += ing.Price
-	this.Ingredients = append(this.Ingredients, ing.Name)
+	this.AddedIngredients = append(this.AddedIngredients, ing.Name)
 }
 
-func (this pizza) GetPrice() int{
+func (this pizza) GetPrice() int {
 	if this.PriceDelta < 0 {
 		return this.Price
 	} else {
@@ -59,6 +62,7 @@ func (this pizza) GetPrice() int{
 
 // Make a sortable pizza array
 type PizzaArray []*pizza
+
 func (this PizzaArray) Len() int {
 	return len(this)
 }
@@ -70,13 +74,13 @@ func (this PizzaArray) Less(i, j int) bool {
 		return this[i].GetPrice() < this[j].GetPrice()
 	}
 }
-func (this PizzaArray) Swap(i, j int){
+func (this PizzaArray) Swap(i, j int) {
 	tmp := this[j]
 	this[j] = this[i]
 	this[i] = tmp
 }
 
-func main(){
+func main() {
 	var (
 		menuPath        string
 		ingredientsPath string
@@ -105,7 +109,7 @@ func main(){
 		return
 	}
 
-	if ingredientsPath == "" || (menuPath == "" && !list){
+	if ingredientsPath == "" || (menuPath == "" && !list) {
 		usage()
 		return
 	}
@@ -113,7 +117,7 @@ func main(){
 	var (
 		ingredients   []ingredient
 		ingredientIdx map[string]int
-		pizzas		  PizzaArray
+		pizzas        PizzaArray
 	)
 
 	ingredientIdx = make(map[string]int)
@@ -134,8 +138,6 @@ func main(){
 		fmt.Printf("%v\n", err)
 		return
 	}
-
-
 
 	if list {
 		for i, ing := range ingredients {
@@ -198,12 +200,21 @@ func main(){
 
 	sort.Sort(pizzas)
 	fmt.Printf("Pizzas:\n")
-	for i := 0; i<len(pizzas) && i<4; i++ {
+	for i := 0; i < len(pizzas) && i < 4; i++ {
 		fmt.Printf("%s: %d.%.2d€\n", pizzas[i].Name, pizzas[i].GetPrice()/100, pizzas[i].GetPrice()%100)
 		fmt.Printf("\t%d.%.2d€ %d [", pizzas[i].PriceDelta/100, (int)(math.Abs((float64)(pizzas[i].PriceDelta%100))), len(pizzas[i].Ingredients))
 		for _, name := range pizzas[i].Ingredients {
 			fmt.Printf("%s,", name)
 		}
+		fmt.Printf("] + %d [", len(pizzas[i].AddedIngredients))
+		for _, name := range pizzas[i].AddedIngredients {
+			fmt.Printf("%s,", name)
+		}
+		fmt.Printf("] - %d [", len(pizzas[i].RemovedIngredients))
+		for _, name := range pizzas[i].RemovedIngredients {
+			fmt.Printf("%s,", name)
+		}
+
 		fmt.Printf("]\n\n")
 	}
 }

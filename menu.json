@@ -1,5 +1,15 @@
 [
 	{
+		"name": "Samourai kebab",
+		"price": 899,
+		"ingredients": ["mozzarella", "viande kebab", "oignons", "tomates fraîches", "sauce samourai"]
+	},
+	{
+		"name": "Saumoneta",
+		"price": 899,
+		"ingredients": ["mozzarella", "saumon", "oignons", "pommes de terre"]
+	},
+	{
 		"name": "savoureuse fondue",
 		"price": 1000,
 		"ingredients": ["lardons", "mélange fondue français", "mozzarella"]

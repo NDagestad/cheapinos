@@ -36,5 +36,8 @@
 	{"name":"émincé végétal rôti", "price": 290},
 	{"name":"sauce basilic", "price": 150},
 	{"name":"rapé vegan", "price": 290},
-	{"name":"tomates cerises marinées", "price": 150}
+	{"name":"tomates cerises marinées", "price": 150},
+	{"name":"Quartiers de citron vert", "price": 150},
+	{"name":"Olive kalamata", "price": 180},
+	{"name":"Huile d'olive", "price": 180}
 ]

@@ -65,7 +65,7 @@
 		"name": "extravaganzza",
 		"price": 1050,
 		"ingredients": ["boulettes de boeuf assaisonnées", "champignons", "jambon", "mozzarella",
-			"oignons", "olives noires", "pepperoni", "poivrons mélangés"]
+			"oignons", "olives Kalamta", "pepperoni", "poivrons mélangés"]
 	},
 	{
 		"name": "4 fromages",
@@ -121,13 +121,13 @@
 	{
 		"name": "peppina",
 		"price": 850,
-		"ingredients": ["champignons", "mozzarella", "oignons", "olives noires", "origan", 
+		"ingredients": ["champignons", "mozzarella", "oignons", "olives kamalata", "origan", 
 			"poivrons mélangés", "tomates fraîches"]
 	},
 	{
 		"name": "pêcheur",
 		"price": 850,
-		"ingredients": ["crème fraîche légère française", "mozzarella", "oignons", "olives noires",
+		"ingredients": ["crème fraîche légère française", "mozzarella", "oignons", "olives kamalata",
 			"thon"]
 	},
 	{

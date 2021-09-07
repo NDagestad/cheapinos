@@ -15,7 +15,6 @@
 	{"name":"miel français","price":150},
 	{"name":"mozzarella","price":200},
 	{"name":"oignons","price":100},
-	{"name":"olives noires","price":100},
 	{"name":"origan","price":0},
 	{"name":"pepperoni","price":180},
 	{"name":"piments jalapenos","price":100},
@@ -37,7 +36,7 @@
 	{"name":"sauce basilic", "price": 150},
 	{"name":"rapé vegan", "price": 290},
 	{"name":"tomates cerises marinées", "price": 150},
-	{"name":"Quartiers de citron vert", "price": 150},
-	{"name":"Olive kalamata", "price": 180},
-	{"name":"Huile d'olive", "price": 180}
+	{"name":"quartiers de citron vert", "price": 150},
+	{"name":"olive kalamata", "price": 180},
+	{"name":"huile d'olive", "price": 180}
 ]

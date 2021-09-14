@@ -91,7 +91,7 @@ func main() {
 	)
 	flag.StringVar(&ingredientsPath, "i", "", "File with the ingredients information")
 	flag.StringVar(&menuPath, "m", "", "File with the menu information")
-	flag.BoolVar(&list, "l", false, "List the ingredients and exit")
+	flag.BoolVar(&list, "l", false, "List the ingredients and exit - requires the ingredient list to work (option -i)")
 	flag.StringVar(&add, "a", "", "Comma separated list of indices of the ingredients to add (as shown with the -l option)")
 	flag.StringVar(&remove, "r", "", "Comma separated list of indices of the ingredients to remove (as shown with the -l option)")
 	flag.BoolVar(&help, "h", false, "Show this message and exit")
